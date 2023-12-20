@@ -32,12 +32,6 @@ function initializeWidget() {
 		ZOHO.CRM.UI.Popup.closeReload();
       }
       console.log({ "Create note data": data });
-      // ZOHO.CRM.API.insertRecord({
-      //   Entity: "Leads",
-      //   APIData: data,
-      // }).then(function (data) {
-      //   console.log(data);
-      // });
     });
   });
 

@@ -3,14 +3,8 @@ function initializeWidget() {
    * Subscribe to the EmbeddedApp onPageLoad event before initializing the widget
    */
   ZOHO.embeddedApp.on("PageLoad", function (data) {
-    console.log(data);
-    console.log(data.EntityId[0]);
-    console.log(data.Entity);
     const module = data.Entity;
-    const recordId = data.EntityId[0];
-    // ZOHO.CRM.API.getRecord({Entity:data.Entity,RecordID:data.EntityId}).then(function(data){console.log({"Data Value":data})})
-    console.log(module);
-    console.log(recordId);
+    const recordId = data.EntityId;
     let submitButton = document.getElementById("submit");
     submitButton.addEventListener("click", function () {
       let noteTitle = document.querySelector(".title").value;
